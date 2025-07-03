@@ -14,7 +14,7 @@ function isPasswordProtected() {
     const isAdminPwdValid = typeof adminPwd === 'string' && adminPwd.length === 64 && !/^0+$/.test(adminPwd);
 
     // 任意一个密码有效即认为启用了密码保护
-    return isPwdValid || isAdminPwdValid;
+    return false;
 }
 
 window.isPasswordProtected = isPasswordProtected;
